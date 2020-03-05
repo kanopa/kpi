@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Tableware</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="Languages">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Fourth</item>
+    </string-array>
+    <string name="title_activity_choose">ChooseActivity</string>
 </resources>

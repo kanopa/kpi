@@ -1,10 +1,13 @@
 package com.example.tableware
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -15,13 +18,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            val originalValue = textDisplayedValue.text.toString().toInt();
-            val newValue = originalValue*2;
-            textDisplayedValue.text = newValue.toString()
-            Snackbar.make(view, "value $originalValue change to $newValue",
-                Snackbar.LENGTH_LONG)
-                .show()
+        val language = resources.getStringArray(R.array.Languages)
+
+        val spinner = findViewById<Spinner>(R.id.spinner)
+        if(spinner != null)
+        {
+            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, language)
+            spinner.adapter = adapter
+        }
+
+        button.setOnClickListener { view ->
+            val activityIntent = Intent(this, ChooseActivity::class.java)
+            startActivity(activityIntent)
         }
     }
 
