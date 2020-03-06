@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -15,6 +16,10 @@ class MainActivity : AppCompatActivity() {
     val EXTRA_MESSAGE = "EXTRA_MESSAGE"
     val EXTRA_MESSAGE2 = "EXTRA_MESSAGE2"
     val EXTRA_MESSAGE3 = "EXTRA_MESSAGE3"
+    val EXTRA_MESSAGE4 = "EXTRA_MESSAGE4"
+    val EXTRA_MESSAGE5 = "EXTRA_MESSAGE5"
+    val EXTRA_MESSAGE6 = "EXTRA_MESSAGE6"
+    val EXTRA_MESSAGE7 = "EXTRA_MESSAGE7"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,31 +34,7 @@ class MainActivity : AppCompatActivity() {
         {
             spinner.adapter = adapter
         }
-        man1.setOnClickListener{
-            man2.setChecked(false)
-            man3.setChecked(false)
-        }
-        man2.setOnClickListener{
-            man1.setChecked(false)
-            man3.setChecked(false)
-        }
-        man3.setOnClickListener{
-            man1.setChecked(false)
-            man2.setChecked(false)
-        }
-        price1.setOnClickListener{
-            price2.setChecked(false)
-            price3.setChecked(false)
-        }
-        price2.setOnClickListener{
-            price1.setChecked(false)
-            price3.setChecked(false)
-        }
-        price3.setOnClickListener{
-            price1.setChecked(false)
-            price2.setChecked(false)
-        }
-        button.setOnClickListener {
+        button.setOnClickListener {view ->
             val activityIntent = Intent(this, ChooseActivity::class.java)
             val spinnerTxt = spinner.selectedItem.toString()
             val manufact1 = man1.getText().toString()
@@ -63,27 +44,37 @@ class MainActivity : AppCompatActivity() {
             val priceText2 = price2.getText().toString()
             val priceText3 = price3.getText().toString()
 
+            Snackbar.make(view, "Choose something please", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+
             if(man1.isChecked())
             {
                 activityIntent.putExtra(EXTRA_MESSAGE2,manufact1)
-            } else if(man2.isChecked())
+            }
+            if(man2.isChecked())
             {
-                activityIntent.putExtra(EXTRA_MESSAGE2,manufact2)
-            } else{
-                activityIntent.putExtra(EXTRA_MESSAGE2,manufact3)
+                activityIntent.putExtra(EXTRA_MESSAGE3,manufact2)
+            }
+            if(man3.isChecked()){
+                activityIntent.putExtra(EXTRA_MESSAGE4,manufact3)
             }
             if( price1.isChecked())
             {
-                activityIntent.putExtra(EXTRA_MESSAGE3,priceText)
-            } else if(price2.isChecked())
-            {
-                activityIntent.putExtra(EXTRA_MESSAGE3, priceText2)
-            } else
-            {
-                activityIntent.putExtra(EXTRA_MESSAGE3, priceText3)
+                activityIntent.putExtra(EXTRA_MESSAGE5,priceText)
             }
-            activityIntent.putExtra(EXTRA_MESSAGE, spinnerTxt)
-            startActivity(activityIntent)
+            if(price2.isChecked())
+            {
+                activityIntent.putExtra(EXTRA_MESSAGE6, priceText2)
+            }
+            if(price3.isChecked())
+            {
+                activityIntent.putExtra(EXTRA_MESSAGE7, priceText3)
+            }
+            if (man1.isChecked() || man2.isChecked() || man3.isChecked() && price1.isChecked() || price2.isChecked() || price3.isChecked())
+            {
+                activityIntent.putExtra(EXTRA_MESSAGE, spinnerTxt)
+                startActivity(activityIntent)
+            }
         }
     }
 

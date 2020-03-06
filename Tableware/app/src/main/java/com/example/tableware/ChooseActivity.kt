@@ -19,15 +19,27 @@ class ChooseActivity : AppCompatActivity() {
         val message = intent.getStringExtra(MainActivity().EXTRA_MESSAGE)
         val message2 = intent.getStringExtra(MainActivity().EXTRA_MESSAGE2)
         val message3 = intent.getStringExtra(MainActivity().EXTRA_MESSAGE3)
+        val message4 = intent.getStringExtra(MainActivity().EXTRA_MESSAGE4)
+        val message5 = intent.getStringExtra(MainActivity().EXTRA_MESSAGE5)
+        val message6 = intent.getStringExtra(MainActivity().EXTRA_MESSAGE6)
+        val message7 = intent.getStringExtra(MainActivity().EXTRA_MESSAGE7)
 
 
-        val textView = findViewById<TextView>(R.id.Choose1)
-        val textView2 = findViewById<TextView>(R.id.Choose2)
-        val textView3 = findViewById<TextView>(R.id.Choose3)
+        val textView = findViewById<TextView>(R.id.choose1)
+        val textView2 = findViewById<TextView>(R.id.choose2)
+        val textView3 = findViewById<TextView>(R.id.choose3)
+        val textView4 = findViewById<TextView>(R.id.choose4)
+        val textView5 = findViewById<TextView>(R.id.choose5)
+        val textView6 = findViewById<TextView>(R.id.choose6)
+        val textView7 = findViewById<TextView>(R.id.choose7)
 
         textView.setText(message)
         textView2.setText(message2)
         textView3.setText(message3)
+        textView4.setText(message4)
+        textView5.setText(message5)
+        textView6.setText(message6)
+        textView7.setText(message7)
 
         button_back.setOnClickListener {
             val activityIntent = Intent(this, MainActivity::class.java)
