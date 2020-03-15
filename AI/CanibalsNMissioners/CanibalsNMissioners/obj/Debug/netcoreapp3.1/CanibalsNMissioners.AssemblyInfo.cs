@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CaniballsNMissioners")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CanibalsNMissioners")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("CaniballsNMissioners")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CaniballsNMissioners")]
+[assembly: System.Reflection.AssemblyProductAttribute("CanibalsNMissioners")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CanibalsNMissioners")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

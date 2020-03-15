@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "B:\\kpi\\CaniballsNMissioners\\CaniballsNMissioners\\CaniballsNMissioners.csproj",
-      "projectName": "CaniballsNMissioners",
-      "projectPath": "B:\\kpi\\CaniballsNMissioners\\CaniballsNMissioners\\CaniballsNMissioners.csproj",
+      "projectUniqueName": "B:\\kpi\\AI\\CanibalsNMissioners\\CanibalsNMissioners\\CanibalsNMissioners.csproj",
+      "projectName": "CanibalsNMissioners",
+      "projectPath": "B:\\kpi\\AI\\CanibalsNMissioners\\CanibalsNMissioners\\CanibalsNMissioners.csproj",
       "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-      "outputPath": "B:\\kpi\\CaniballsNMissioners\\CaniballsNMissioners\\obj\\",
+      "outputPath": "B:\\kpi\\AI\\CanibalsNMissioners\\CanibalsNMissioners\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

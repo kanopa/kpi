@@ -1,0 +1,11 @@
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\bin\Debug\netcoreapp3.1\CanibalsNMissioners.exe
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\bin\Debug\netcoreapp3.1\CanibalsNMissioners.deps.json
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\bin\Debug\netcoreapp3.1\CanibalsNMissioners.runtimeconfig.json
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\bin\Debug\netcoreapp3.1\CanibalsNMissioners.runtimeconfig.dev.json
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\bin\Debug\netcoreapp3.1\CanibalsNMissioners.dll
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\bin\Debug\netcoreapp3.1\CanibalsNMissioners.pdb
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\obj\Debug\netcoreapp3.1\CanibalsNMissioners.csprojAssemblyReference.cache
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\obj\Debug\netcoreapp3.1\CanibalsNMissioners.AssemblyInfoInputs.cache
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\obj\Debug\netcoreapp3.1\CanibalsNMissioners.AssemblyInfo.cs
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\obj\Debug\netcoreapp3.1\CanibalsNMissioners.dll
+B:\kpi\AI\CanibalsNMissioners\CanibalsNMissioners\obj\Debug\netcoreapp3.1\CanibalsNMissioners.pdb
