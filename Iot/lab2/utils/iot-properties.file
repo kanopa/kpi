@@ -1,0 +1,9 @@
+
+host = aacnhsjpkc6q3-ats.iot.us-east-1.amazonaws.com
+port = 8883
+clientId = Pi3-DHT11-Konoplyanka
+thingName = Pi3-DHT11-Konoplyanka
+caPath = ./utils/root-CA.crt
+certPath = ./utils/5e19c8e755-certificate.pem.crt
+keyPath =  ./utils/5e19c8e755-private.pem.key
+region = us-east-1
