@@ -44,9 +44,6 @@ class MainActivity : AppCompatActivity() {
             val priceText2 = price2.getText().toString()
             val priceText3 = price3.getText().toString()
 
-            Snackbar.make(view, "Choose something please", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-
             if(man1.isChecked())
             {
                 activityIntent.putExtra(EXTRA_MESSAGE2,manufact1)
@@ -70,10 +67,13 @@ class MainActivity : AppCompatActivity() {
             {
                 activityIntent.putExtra(EXTRA_MESSAGE7, priceText3)
             }
-            if (man1.isChecked() || man2.isChecked() || man3.isChecked() && price1.isChecked() || price2.isChecked() || price3.isChecked())
+            if ( (man1.isChecked() || man2.isChecked() || man3.isChecked()) && (price1.isChecked() || price2.isChecked() || price3.isChecked()))
             {
                 activityIntent.putExtra(EXTRA_MESSAGE, spinnerTxt)
                 startActivity(activityIntent)
+            } else {
+                Snackbar.make(view, "Choose something please", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
             }
         }
     }
