@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CanibalsNMissioners
 {
-    public enum Boat
+    public enum Boat // Можливі стани човна
     {
         Right,
         Left,

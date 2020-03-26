@@ -26,7 +26,7 @@ namespace CanibalsNMissioners
             this.missionerBoat = missionerBoat;
             this.boat = boat;
         }
-        public bool Valid()
+        public bool Valid() // Умова для того щоб не було мінусових значень та щоб в човні не було білеше двух людей
         {
             if ((cannibalLeft >= 0 && cannibalRight >= 0 && missionerLeft >= 0 && missionerRight >= 0 && cannibalBoat >= 0 && missionerBoat >= 0) &&
                 (missionerRight == 0 || cannibalRight == missionerRight || cannibalRight == 0) &&
@@ -35,11 +35,11 @@ namespace CanibalsNMissioners
 
             return false;
         }
-        public bool Goal()
+        public bool Goal() // Рішення задачі
         {
             return cannibalLeft == 0 && missionerLeft == 0 && boat == Boat.Right;
         }
-        public void CheckGoal(List<Transition> childTransition, Transition transition)
+        public void CheckGoal(List<Transition> childTransition, Transition transition) // Перевірка валідності
         {
             if (transition.Valid())
             {
@@ -47,7 +47,7 @@ namespace CanibalsNMissioners
                 childTransition.Add(transition);
             }
         }
-        public List<Transition> Transitions()
+        public List<Transition> Transitions() // Можливі переходи
         {
             List<Transition> transitions = new List<Transition>();
 
