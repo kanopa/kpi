@@ -29,22 +29,20 @@ class ContentFragment() : Fragment() {
         val textView6 = rootView.findViewById<TextView>(R.id.choose6)
         val textView7 = rootView.findViewById<TextView>(R.id.choose7)
 
-        val str = this.getArguments()?.getString("Key").toString()
-        val KeyManufac1 = this.getArguments()?.getString("KeyManufac1")
-        val KeyManufac2 = this.getArguments()?.getString("KeyManufac2")
-        val KeyManufac3 = this.getArguments()?.getString("KeyManufac3")
-        val KeyPrice1 = this.getArguments()?.getString("KeyPrice1")
-        val KeyPrice2 = this.getArguments()?.getString("KeyPrice2")
-        val KeyPrice3 = this.getArguments()?.getString("KeyPrice3")
-
-        spinner.setText(str)
-        textView2.setText(KeyManufac1)
-        textView3.setText(KeyManufac2)
-        textView4.setText(KeyManufac3)
-        textView5.setText(KeyPrice1)
-        textView6.setText(KeyPrice2)
-        textView7.setText(KeyPrice3)
+        setTextView(spinner, textView2, textView3, textView4, textView5, textView6, textView7)
 
         return rootView
+    }
+
+    fun setTextView(spinner: TextView, textView2: TextView, textView3: TextView,
+                    textView4: TextView, textView5: TextView, textView6: TextView, textView7: TextView)
+    {
+        spinner.setText(this.getArguments()?.getString("Key"))
+        textView2.setText(this.getArguments()?.getString("KeyManufac1"))
+        textView3.setText(this.getArguments()?.getString("KeyManufac2"))
+        textView4.setText(this.getArguments()?.getString("KeyManufac3"))
+        textView5.setText(this.getArguments()?.getString("KeyPrice1"))
+        textView6.setText(this.getArguments()?.getString("KeyPrice2"))
+        textView7.setText(this.getArguments()?.getString("KeyPrice3"))
     }
 }
