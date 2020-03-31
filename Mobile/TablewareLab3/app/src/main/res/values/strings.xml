@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TablewareLab3</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string-array name="Languages">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Fourth</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_100">100</string>
+    <string name="price">Price</string>
+    <string name="_300">300</string>
+    <string name="_200">200</string>
+    <string name="choose_a_tableware">Choose a tableware:</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="one">One</string>
+    <string name="select">Select</string>
+    <string name="select_all">Show all</string>
+    <string name="tableware">Tableware:</string>
+    <string name="textview">TextView</string>
+    <string name="price2">Price:</string>
+    <string name="manufacturer2">Manufacturer:</string>
+    <string name="Select">Your chosen dishes, manufacturer and price</string>
+</resources>
