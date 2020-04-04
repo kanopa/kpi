@@ -31,8 +31,8 @@ class SecondFragment : Fragment() {
 
         val show_button = rootView.findViewById(R.id.show_all) as Button
 
-        showAll(show_button)
         setTextView(spinner, textView2, textView3, textView4, textView5, textView6, textView7)
+        showAll(show_button)
 
         return rootView
     }

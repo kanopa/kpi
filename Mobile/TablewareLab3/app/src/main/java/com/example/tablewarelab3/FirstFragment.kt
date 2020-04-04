@@ -38,12 +38,12 @@ class FirstFragment : Fragment() {
             if ((man1.isChecked() || man2.isChecked() || man3.isChecked()) && (price1.isChecked() || price2.isChecked() || price3.isChecked()))
             {
                 input(bundle, myFragment)
-                saveDB(bundle, context)
-                Toast.makeText(context, "Add to base", Toast.LENGTH_LONG).show()
                 fm!!.beginTransaction()
                     .replace(R.id.fragment,myFragment)
                     .show(myFragment)
                     .commit()
+                saveDB(bundle, context)
+                Toast.makeText(context, "Add to base", Toast.LENGTH_LONG).show()
             } else {
                 fm!!.beginTransaction().replace(R.id.fragment,myFragment)
                     .hide(myFragment)

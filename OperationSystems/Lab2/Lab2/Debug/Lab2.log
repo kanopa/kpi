@@ -1,0 +1,6 @@
+﻿  Lab2.cpp
+  allocator.cpp
+B:\kpi\OperationSystems\Lab2\Lab2\allocator.cpp(25,21): warning C4244: инициализация: преобразование "double" в "size_t", возможна потеря данных
+  print.cpp
+  Создание кода...
+  Lab2.vcxproj -> B:\kpi\OperationSystems\Lab2\Debug\Lab2.exe
