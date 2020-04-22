@@ -4,7 +4,7 @@ using System.Text;
 
 namespace lab2
 {
-    class Bucket
+    public class Bucket
     {
         public int Capacity { set; get; }
         public int Filled { set; get; }

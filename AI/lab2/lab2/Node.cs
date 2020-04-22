@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace lab2
@@ -10,6 +11,7 @@ namespace lab2
         public Bucket FirstBucket { set; get; }
         public Bucket SecondBucket { set; get; }
         public string Action { set; get; }
+        public int Value { set; get; }
 
         public List<Node> GenerateNodes(Node node)
         {
@@ -54,9 +56,10 @@ namespace lab2
                 {
                     temp.AddRange(GenerateNodes(item));
                 }
-                temp.RemoveAll(x => (x.FirstBucket.Filled == 9 && x.SecondBucket.Filled == 5) ||
-                (x.FirstBucket.Filled == 0 && x.SecondBucket.Filled == 0));
-                nodes = temp;
+
+                var minValue = temp.Min(x => x.Value);
+                nodes = temp.Where(x => x.Value == minValue).ToList();
+
                 foreach (var item in nodes)
                 {
                     if (IsGoal(item))
@@ -78,7 +81,8 @@ namespace lab2
                 Prev = node,
                 FirstBucket = new Bucket() { Capacity = 9, Filled = 9 },
                 SecondBucket = new Bucket() { Capacity = node.SecondBucket.Capacity, Filled = node.SecondBucket.Filled },
-                Action = "Fill the first Bucket     "
+                Action = "Fill the first Bucket     ",
+                Value = GenerateValue(node)
             };
         }
         public Node FillSecondBucket(Node node)
@@ -88,7 +92,8 @@ namespace lab2
                 Prev = node,
                 FirstBucket = new Bucket() { Capacity = node.FirstBucket.Capacity, Filled = node.FirstBucket.Filled },
                 SecondBucket = new Bucket() { Capacity = 5, Filled = 5 },
-                Action = "Fill the second Bucket"
+                Action = "Fill the second Bucket",
+                Value = GenerateValue(node)
             };
         }
         public Node EmptyFirstBucket(Node node)
@@ -98,7 +103,8 @@ namespace lab2
                 Prev = node,
                 FirstBucket = new Bucket() { Capacity = node.FirstBucket.Capacity, Filled = 0 },
                 SecondBucket = new Bucket() { Capacity = node.SecondBucket.Capacity, Filled = node.SecondBucket.Filled },
-                Action = "Empty the first bucket"
+                Action = "Empty the first bucket",
+                Value = GenerateValue(node)
             };
         }
         public Node EmptySecondBucket(Node node)
@@ -108,8 +114,24 @@ namespace lab2
                 Prev = node,
                 FirstBucket = new Bucket() { Capacity = node.FirstBucket.Capacity, Filled = node.FirstBucket.Filled },
                 SecondBucket = new Bucket() { Capacity = node.SecondBucket.Capacity, Filled = 0 },
-                Action = "Empty the second bucket    "
+                Action = "Empty the second bucket    ",
+                Value = GenerateValue(node)
             };
+        }
+
+        static int GenerateValue(Node node)
+        {
+            if (node.FirstBucket.Filled != 0 && node.FirstBucket.Filled != node.FirstBucket.Capacity &&
+               node.SecondBucket.Filled != 0 && node.SecondBucket.Filled != node.SecondBucket.Capacity)
+            {
+                return node.Value + 1;
+            }
+            else if ((node.FirstBucket.Filled != 0 && node.FirstBucket.Filled != node.FirstBucket.Capacity) ||
+                     (node.SecondBucket.Filled != 0 && node.SecondBucket.Filled != node.SecondBucket.Capacity))
+            {
+                return node.Value + 2;
+            }
+            return node.Value + 3;
         }
 
         public Node PourFirstToSecondBucket(Node node)
@@ -135,7 +157,8 @@ namespace lab2
                 Prev = node,
                 FirstBucket = firstBucket,
                 SecondBucket = secondBucket,
-                Action = "Pour First To Second Bucket"
+                Action = "Pour First To Second Bucket",
+                Value = GenerateValue(node)
             };
         }
         public Node PourSecondToFirstBucket(Node node)
@@ -161,7 +184,8 @@ namespace lab2
                 Prev = node,
                 FirstBucket = firstBucket,
                 SecondBucket = secondBucket,
-                Action = "Pour Second To First Bucket"
+                Action = "Pour Second To First Bucket",
+                Value = GenerateValue(node)
             };
         }
     }
