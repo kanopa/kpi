@@ -153,7 +153,7 @@ namespace lab3
             {
                 return node.Value + 1;
             }
-            else if ((person.Pair == secondPerson.Pair) || (person.Type != secondPerson.Type))
+            else if ((person.Pair == secondPerson.Pair) || (person.Type == secondPerson.Type))
             {
                 return node.Value + 2;
             }
